@@ -68,7 +68,7 @@ h1 {
 }
 
 /* Style the input field for adding tasks */
-#task {
+#task-input {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -76,7 +76,7 @@ h1 {
 }
 
 /* Style the "Add" button */
-#add {
+#add-task {
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -86,7 +86,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#add:hover {
+#add-task:hover {
     background-color: #218838;
 }
 
@@ -111,6 +111,17 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 8px 0;
+}
+
+/* Style the "Delete" button for lists */
+.delete-list {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 /* Style the "Delete" button for tasks */
