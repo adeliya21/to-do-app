@@ -28,13 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    addButton.addEventListener("click", function () {
+    addTaskButton.addEventListener("click", function () {
         const taskText = taskInput.value.trim();
         if (taskText !== "") {
+            const taskList = listsContainer.querySelector(".todo-list ul");
             const li = document.createElement("li");
             li.innerHTML = `
                 <span>${taskText}</span>
-                <span class="delete">Delete</span>
+                <span class="delete-task">Delete</span>
             `;
             taskList.appendChild(li);
             taskInput.value = "";
