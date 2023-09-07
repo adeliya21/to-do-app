@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const listNameInput = document.getElementById("listName");
+    const createListButton = document.getElementById("createList");
     const taskInput = document.getElementById("task");
-    const addButton = document.getElementById("add");
-    const taskList = document.getElementById("taskList");
+    const addTaskButton = document.getElementById("addTask");
+    const listsContainer = document.getElementById("lists");
+
+    
 
     addButton.addEventListener("click", function () {
         const taskText = taskInput.value.trim();
