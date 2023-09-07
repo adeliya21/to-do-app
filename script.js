@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    function addDeleteListListener(list) {
+        const deleteListButton = list.querySelector(".delete-list");
+        deleteListButton.addEventListener("click", function () {
+            listsContainer.removeChild(list);
+        });
+    }
+
     addButton.addEventListener("click", function () {
         const taskText = taskInput.value.trim();
         if (taskText !== "") {
