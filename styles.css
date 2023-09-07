@@ -1,54 +1,120 @@
+/* Reset some default styles for consistency */
+body, h1, ul, button, input {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Apply a background color and some spacing to the body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
+/* Style the container for the entire application */
 .container {
     max-width: 400px;
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
+/* Style the To-Do List title */
 h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.input-container {
+/* Style the list container for creating new lists */
+.list-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-input[type="text"] {
+/* Style the input field for list names */
+#listName {
     flex-grow: 1;
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-button {
-    padding: 8px 15px;
-    background-color: #007BFF;
+/* Style the "Create List" button */
+#createList {
+    background-color: #007bff;
     color: #fff;
     border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-ul {
-    list-style: none;
+#createList:hover {
+    background-color: #0056b3;
+}
+
+/* Style the input container for adding tasks */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style the input field for adding tasks */
+#task {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the "Add" button */
+#add {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add:hover {
+    background-color: #218838;
+}
+
+/* Style the individual To-Do lists */
+.todo-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Style the task list within each To-Do list */
+.todo-list ul {
+    list-style-type: none;
     padding: 0;
 }
 
-li {
+/* Style the individual tasks within a To-Do list */
+.todo-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
-.delete {
-    color: red;
+/* Style the "Delete" button for tasks */
+.delete-task {
+    color: #dc3545;
     cursor: pointer;
 }
