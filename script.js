@@ -5,7 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const addTaskButton = document.getElementById("addTask");
     const listsContainer = document.getElementById("lists");
 
-    
+    createListButton.addEventListener("click", function () {
+        const listName = listNameInput.value.trim();
+        if (listName !== "") {
+            const list = document.createElement("div");
+            list.className = "todo-list";
+            list.innerHTML = `
+                <h2>${listName}</h2>
+                <ul></ul>
+                <button class="delete-list">Delete List</button>
+            `;
+            listsContainer.appendChild(list);
+            listNameInput.value = "";
+            addDeleteListListener(list);
+        }
+    });
 
     addButton.addEventListener("click", function () {
         const taskText = taskInput.value.trim();
