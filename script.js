@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const listNameInput = document.getElementById("listName");
     const createListButton = document.getElementById("createList");
-    const taskInput = document.getElementById("task");
-    const addTaskButton = document.getElementById("add");
     const todoContainer = document.querySelector(".todo-container");
 
     createListButton.addEventListener("click", function () {
@@ -13,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             todoList.innerHTML = `
                 <h2>${listName}</h2>
                 <div class="input-container">
-                    <input type="text" class="task-input" placeholder="Add a new task">
-                    <button class="add-task">Add</button>
+                    <input type="text" id="task-input" placeholder="Add a new task">
+                    <button id="add-task">Add</button>
                 </div>
                 <ul class="task-list"></ul>
                 <button class="delete-list">Delete List</button>
@@ -34,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addAddTaskListener(list) {
-        const taskInput = list.querySelector(".task-input");
-        const addTaskButton = list.querySelector(".add-task");
+        const taskInput = list.querySelector("#task-input");
+        const addTaskButton = list.querySelector("#add-task");
         const taskList = list.querySelector(".task-list");
 
         addTaskButton.addEventListener("click", function () {
