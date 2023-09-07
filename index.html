@@ -13,11 +13,16 @@
             <input type="text" id="listName" placeholder="List name">
             <button id="createList">Create List</button>
         </div>
-        <div class="input-container">
-            <input type="text" id="task" placeholder="Add a new task">
-            <button id="add">Add</button>
+        <div class="todo-container">
+            <div class="todo-list">
+                <h2>Default List</h2>
+                <div class="input-container">
+                    <input type="text" id="task" placeholder="Add a new task">
+                    <button id="add">Add</button>
+                </div>
+                <ul id="taskList"></ul>
+            </div>
         </div>
-        <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
 </body>
