@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             taskList.appendChild(li);
             taskInput.value = "";
-            addDeleteListener(li);
+            addDeleteTaskListener(li);
         }
     });
 
-    function addDeleteListener(li) {
-        const deleteButton = li.querySelector(".delete");
-        deleteButton.addEventListener("click", function () {
-            taskList.removeChild(li);
+    function addDeleteTaskListener(li) {
+        const deleteButton = task.querySelector(".delete-task");
+        deleteTaskButton.addEventListener("click", function () {
+            taskList.removeChild(task);
         });
     }
 });
